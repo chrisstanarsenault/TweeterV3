@@ -1,0 +1,15 @@
+nav {
+  position: fixed;
+  height: 120px;
+  width: 100vw;
+  z-index: 999;
+  background-color: #4056a1;
+  color: #fff;
+  padding: 1.3em;
+  top: 0;
+  left: 0;
+}
+
+nav span {
+  font-size: 40px;
+}
