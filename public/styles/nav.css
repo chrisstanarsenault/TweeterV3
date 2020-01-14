@@ -3,7 +3,8 @@ nav {
   height: 120px;
   width: 100vw;
   z-index: 999;
-  background-color: #4056a1;
+  // background-color: #4056a1;
+  background-color: transparent;
   color: #fff;
   padding: 1.3em;
   top: 0;

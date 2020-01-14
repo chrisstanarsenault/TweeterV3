@@ -1,10 +1,24 @@
 header {
-  margin-top: 120px;
-  height: 400px;
+  // margin-top: 120px;
+  height: 520px;
   width: 100%;
   position: relative;
   background-color: #ad7c00;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+header .image-container {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+header .name-container {
+  position: absolute;
+  top: 85%;
+  right: 50%;
+  transform: translate(50%, -50%);
 }
 
 header div {
