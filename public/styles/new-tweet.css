@@ -35,3 +35,7 @@
   margin-top: 20px;
   font-size: 27px;
 }
+
+.new-tweet form .counterRed {
+  color: red;
+}
