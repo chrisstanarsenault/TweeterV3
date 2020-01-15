@@ -2,6 +2,15 @@ article {
   border: 3px solid black;
   padding: 20px;
   transition: all 0.3s ease-out;
+  margin-bottom: 20px;
+}
+
+article img {
+  opacity: 0.6;
+}
+
+article:hover img {
+  opacity: 1;
 }
 
 article:hover {
