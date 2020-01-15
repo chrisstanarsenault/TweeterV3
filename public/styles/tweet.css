@@ -1,0 +1,40 @@
+article {
+  border: 3px solid black;
+  padding: 20px;
+}
+
+article:hover {
+  font-weight: bold;
+  box-shadow: 10px 10px #888888;
+}
+
+article header {
+  padding-bottom: 30px;
+}
+
+article header .handle {
+  float: right;
+  font-weight: 300;
+  visibility: hidden;
+}
+
+article:hover header .handle {
+  visibility: visible;
+}
+
+article main {
+  border-bottom: 3px solid black;
+  padding-bottom: 30px;
+}
+
+article main span {
+  padding: 20px;
+}
+
+article footer {
+  padding-top: 20px;
+}
+
+article footer .social-flags {
+  float: right;
+}
