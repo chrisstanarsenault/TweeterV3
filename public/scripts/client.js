@@ -1,5 +1,13 @@
 $(document).ready(function() {
   const createTweetElement = function(tweetData) {
+    function escape(str) {
+      let span = document.createElement("div");
+      span.appendChild(document.createTextNode(str));
+      return span.innerHTML;
+    }
+
+    const safeHTML = `<p>${escape(tweetData.content.text)}</p>`;
+
     let html = $(`<article class="tweet">
           <header>
             <img src="${tweetData.user.avatars}" alt="avatar" />
@@ -8,7 +16,7 @@ $(document).ready(function() {
           </header>
 
           <main>
-            <span>${tweetData.content.text}</span>
+            ${safeHTML}
           </main>
 
           <footer>
@@ -37,7 +45,7 @@ $(document).ready(function() {
   $("#tweet-form").submit(function(event) {
     event.preventDefault();
     let str = $(this).serialize();
-    if ($("textarea").val().length > 10) {
+    if ($("textarea").val().length > 140) {
       alert("Easy on the words cowboy. To many characters");
     } else if ($("textarea").val() === "" || $("textarea").val() === null) {
       alert(
