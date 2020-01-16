@@ -1,25 +1,5 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-// Test / driver code (temporary). Eventually will get this from the server.
 $(document).ready(function() {
-  const tweetData = {
-    user: {
-      name: "Newton",
-      avatars: "https://i.imgur.com/73hZDYK.png",
-      handle: "@SirIsaac"
-    },
-    content: {
-      text:
-        "If I have seen further it is by standing on the shoulders of giants"
-    },
-    created_at: 1461116232227
-  };
-
-  function createTweetElement(tweetData) {
+  const createTweetElement = function(tweetData) {
     let html = $(`<article class="tweet">
           <header>
             <img src="${tweetData.user.avatars}" alt="avatar" />
@@ -42,10 +22,41 @@ $(document).ready(function() {
         </article>`);
 
     return html;
-  }
+  };
 
-  const $tweet = createTweetElement(tweetData);
+  const renderTweets = function(tweets) {
+    tweets.forEach(e => {
+      let $tweet = createTweetElement(e);
+      $("#tweets-container").prepend($tweet);
+    });
+    // loops through tweets
+    // calls createTweetElement for each tweet
+    // takes return value and appends it to the tweets container
+  };
 
-  // Test / driver code (temporary)
-  $("#tweets-container").append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  $("#tweet-form").submit(function(event) {
+    event.preventDefault();
+    let str = $(this).serialize();
+    if ($("textarea").val().length > 10) {
+      alert("Easy on the words cowboy. To many characters");
+    } else if ($("textarea").val() === "" || $("textarea").val() === null) {
+      alert(
+        "Tweet tweet, try actually tweeting something!  Don't leave this blank!"
+      );
+    } else {
+      $.ajax("/tweets/", { method: "POST", data: str }).then(function(tweet) {
+        console.log("Success: ", tweet);
+        loadTweets(tweet);
+        $("textarea").val("");
+      });
+    }
+  });
+
+  const loadTweets = function() {
+    $.ajax("/tweets/", { method: "GET" }).then(function(tweet) {
+      renderTweets(tweet);
+    });
+  };
+
+  loadTweets();
 });

@@ -54,38 +54,19 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form action="/tweets/" method="POST">
+        <form id="tweet-form" action="/tweets/" method="POST">
           <textarea
             id="ta"
             name="text"
             placeholder="What are you humming about?"
           ></textarea>
-          <input type="submit" value="Tweet" />
+          <input id="form-submit-button" type="submit" value="Tweet" />
           <span id="counter" class="counter">140</span>
         </form>
       </section>
 
       <section id="tweets-container">
-        <article class="tweet">
-          <header>
-            <img src="#" alt="avatar" />
-            <span>Chris</span>
-            <span class="handle">@mynameischris</span>
-          </header>
-
-          <main>
-            <span>poop poop poop poop poop poop poop</span>
-          </main>
-
-          <footer>
-            <span class="posted-date">10 days ago</span>
-            <span class="social-flags">
-              <a href="#"><i class="fas fa-flag"></i></a>
-              <a href="#"><i class="fas fa-retweet"></i></a>
-              <a href="#"><i class="fas fa-heart"></i></a>
-            </span>
-          </footer>
-        </article>
+        <!-- body pulled from tweet db -->
       </section>
     </main>
   </body>
