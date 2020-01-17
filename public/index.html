@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
+    <title>Tweeter</title>
 
     <!-- Fonts -->
     <link
@@ -38,7 +38,10 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span class="title">tweeter</span>
+      <span class="header-tweet-button"
+        ><span class="first-word-bold">Write </span>a new tweet</span
+      >
     </nav>
 
     <header class="header-container">
@@ -54,6 +57,11 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div id="tweet-error-container" class="error-message-on-submit">
+          <i class="fas fa-exclamation-triangle"></i
+          ><span class="error-message"></span
+          ><i class="fas fa-exclamation-triangle"></i>
+        </div>
         <form id="tweet-form" action="/tweets/" method="POST">
           <textarea
             id="ta"

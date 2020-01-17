@@ -46,16 +46,22 @@ $(document).ready(function() {
     event.preventDefault();
     let str = $(this).serialize();
     if ($("textarea").val().length > 140) {
-      alert("Easy on the words cowboy. To many characters");
+      $("#tweet-error-container").slideDown("fast");
+      $(".error-message").text(
+        "Whoaaaaa too many characters!!  Ez there cowboy!"
+      );
     } else if ($("textarea").val() === "" || $("textarea").val() === null) {
-      alert(
+      $("#tweet-error-container").slideDown("fast");
+      $(".error-message").text(
         "Tweet tweet, try actually tweeting something!  Don't leave this blank!"
       );
     } else {
       $.ajax("/tweets/", { method: "POST", data: str }).then(function(tweet) {
-        console.log("Success: ", tweet);
-        loadTweets(tweet);
+        $("#tweet-error-container").slideUp("slow");
+        $(".error-message").text("");
+        loadTweets();
         $("textarea").val("");
+        $(".counter").text(140);
       });
     }
   });
@@ -67,4 +73,13 @@ $(document).ready(function() {
   };
 
   loadTweets();
+
+  $(".header-tweet-button").click(function() {
+    $(".new-tweet").slideToggle("slow");
+    $("textarea").val("");
+    $(".counter").text(140);
+    $("#tweet-error-container")
+      .slideUp("fast")
+      .text("");
+  });
 });

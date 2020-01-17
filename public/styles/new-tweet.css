@@ -2,6 +2,7 @@
   position: relative;
   height: 175px;
   padding: 20px;
+  margin-bottom: 80px;
 }
 
 .new-tweet form {
@@ -37,4 +38,16 @@
 
 .new-tweet form .counterRed {
   color: red;
+}
+
+#tweet-error-container {
+  border: 3px solid red;
+  color: red;
+  padding: 20px;
+  display: none;
+  margin-bottom: 10px;
+}
+
+#tweet-error-container .error-message {
+  padding: 0 10px;
 }

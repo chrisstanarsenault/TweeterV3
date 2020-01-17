@@ -11,6 +11,18 @@ nav {
   left: 0;
 }
 
-nav span {
+nav .title {
   font-size: 40px;
+}
+
+nav .header-tweet-button {
+  float: right;
+  background: #4056a1;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+nav .header-tweet-button .first-word-bold {
+  font-weight: 600;
 }
