@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/slideToTop.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -36,7 +37,6 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
     <nav>
       <span class="title">tweeter</span>
       <span class="header-tweet-button"
@@ -44,9 +44,10 @@
       >
     </nav>
 
-    <header class="header-container">
+    <header id="header" class="header-container">
       <div class="image-container">
         <img src="/images/profile-hex.png" />
+        <!-- <img src="/images/rsz-avatar.png" /> -->
       </div>
       <br />
       <div class="name-container">
@@ -54,7 +55,6 @@
       </div>
     </header>
 
-    <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <div id="tweet-error-container" class="error-message-on-submit">
@@ -76,6 +76,10 @@
       <section id="tweets-container">
         <!-- body pulled from tweet db -->
       </section>
+
+      <div id="scroll-to-top-container">
+        <a href="#header"><span id="scroll-to-top-button">^</span></a>
+      </div>
     </main>
   </body>
 </html>

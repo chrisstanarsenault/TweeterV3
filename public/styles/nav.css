@@ -3,12 +3,16 @@ nav {
   height: 120px;
   width: 100vw;
   z-index: 999;
-  // background-color: #4056a1;
-  background-color: transparent;
+  // background-color: transparent;
   color: #fff;
   padding: 1.3em;
   top: 0;
   left: 0;
+}
+
+.scrolled-past-header {
+  color: #4056a1;
+  transition: color 0.4s ease-out;
 }
 
 nav .title {
@@ -17,12 +21,21 @@ nav .title {
 
 nav .header-tweet-button {
   float: right;
+  cursor: pointer;
   background: #4056a1;
   padding: 20px;
   border-radius: 5px;
   font-family: "Source Sans Pro", sans-serif;
+  opacity: 1;
+  transition: all 0.18s ease-out;
 }
 
 nav .header-tweet-button .first-word-bold {
   font-weight: 600;
+}
+
+nav .header-tweet-button-hide {
+  visibility: hidden;
+  opacity: 0 !important;
+  transition: all 0.18s ease-out;
 }

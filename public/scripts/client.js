@@ -82,4 +82,21 @@ $(document).ready(function() {
       .slideUp("fast")
       .text("");
   });
+
+  $(window).scroll(function() {
+    console.log(pageYOffset);
+    if (pageYOffset >= 482) {
+      $(".title").addClass("scrolled-past-header");
+    } else if (pageYOffset < 482) {
+      $(".title").removeClass("scrolled-past-header");
+    }
+
+    if (pageYOffset >= 820) {
+      $(".header-tweet-button").addClass("header-tweet-button-hide");
+      $("#scroll-to-top-button").addClass("scroll-to-top-active");
+    } else if (pageYOffset < 820) {
+      $(".header-tweet-button").removeClass("header-tweet-button-hide");
+      $("#scroll-to-top-button").removeClass("scroll-to-top-active");
+    }
+  });
 });

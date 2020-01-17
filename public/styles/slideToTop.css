@@ -1,0 +1,25 @@
+div #scroll-to-top-button {
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  height: 128px;
+  width: 128px;
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  line-height: 147px;
+  font-size: 69px;
+  font-weight: 600;
+  box-shadow: 0px 0px 10px 2px #888888;
+  transition: all 0.18s ease-out;
+}
+
+div .scroll-to-top-active {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: all 0.18s ease-out;
+}
