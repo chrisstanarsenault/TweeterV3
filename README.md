@@ -27,4 +27,4 @@ Tweeting area
 !["Tweeting area and a highlighted tweet"](https://github.com/chrisstanarsenault/TweeterV3/blob/master/public/images/screenshots/new-tweet-section-ss.png?raw=true)
 
 Uh oh, error time!
-!["Uh oh, error time!"](https://github.com/chrisstanarsenault/TweeterV3/blob/master/public/images/screenshots/error-screen-ss-1.png?raw=true)
+!["Uh oh, error time!"](https://github.com/chrisstanarsenault/TweeterV3/blob/master/public/images/screenshots/error-screen-ss.png?raw=true)
