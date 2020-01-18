@@ -1,6 +1,6 @@
 $(document).ready(function() {
   let getDateFormat = function(milliseconds) {
-    let datetime = milliseconds; // anything
+    let datetime = milliseconds;
     let date = new Date(datetime);
     let options = {
       year: "numeric",
