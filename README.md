@@ -21,10 +21,10 @@ Tweeter is a simple, single-page, not as attractive Twitter clone made up to bui
 ## Screenshots
 
 The Almighty Tweeter \*\*disclaimer - not really almighty
-!["The almighty Compose box"](https://github.com/chrisstanarsenault/TweeterV3/tree/master/public/images/screenshots/tweeter-ss.png?raw=true)
+!["The almighty Compose box"](https://github.com/chrisstanarsenault/TweeterV3/blob/master/public/images/screenshots/tweeter-ss.png?raw=true)
 
 Tweeting area
-!["Tweeting area and a highlighted tweet"](https://github.com/chrisstanarsenault/TweeterV3/tree/master/public/images/screenshots/new-tweet-section-ss.png?raw=true)
+!["Tweeting area and a highlighted tweet"](https://github.com/chrisstanarsenault/TweeterV3/blob/master/public/images/screenshots/new-tweet-section-ss.png?raw=true)
 
 Uh oh, error time!
-!["Uh oh, error time!"](https://github.com/chrisstanarsenault/TweeterV3/tree/master/public/images/screenshots/error-screen-ss-1.png?raw=true)
+!["Uh oh, error time!"](https://github.com/chrisstanarsenault/TweeterV3/blob/master/public/images/screenshots/error-screen-ss-1.png?raw=true)
