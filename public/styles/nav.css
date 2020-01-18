@@ -16,6 +16,8 @@ nav {
 
 nav .title {
   font-size: 40px;
+  opacity: 1;
+  transition: all 0.18s ease-out;
 }
 
 nav .header-tweet-button {

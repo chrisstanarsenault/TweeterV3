@@ -14,6 +14,11 @@
   transform: translate(50%, -50%);
 }
 
+.header-container .image-container img {
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
 .header-container .name-container {
   position: absolute;
   top: 85%;

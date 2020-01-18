@@ -1,4 +1,17 @@
 $(document).ready(function() {
+  let getDateFormat = function(milliseconds) {
+    let datetime = milliseconds; // anything
+    let date = new Date(datetime);
+    let options = {
+      year: "numeric",
+      month: "numeric",
+      day: "numeric"
+    };
+
+    let result = date.toLocaleDateString("en", options);
+    return result;
+  };
+
   const createTweetElement = function(tweetData) {
     function escape(str) {
       let span = document.createElement("div");
@@ -20,7 +33,9 @@ $(document).ready(function() {
           </main>
 
           <footer>
-            <span class="posted-date">${tweetData.created_at}</span>
+            <span class="posted-date">${getDateFormat(
+              tweetData.created_at
+            )}</span>
             <span class="social-flags">
               <a href="#"><i class="fas fa-flag"></i></a>
               <a href="#"><i class="fas fa-retweet"></i></a>
