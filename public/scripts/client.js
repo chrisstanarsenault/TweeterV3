@@ -33,6 +33,7 @@ $(document).ready(function() {
   };
 
   const renderTweets = function(tweets) {
+    $("#tweets-container").empty();
     tweets.forEach(e => {
       let $tweet = createTweetElement(e);
       $("#tweets-container").prepend($tweet);
@@ -56,7 +57,7 @@ $(document).ready(function() {
         "Tweet tweet, try actually tweeting something!  Don't leave this blank!"
       );
     } else {
-      $.ajax("/tweets/", { method: "POST", data: str }).then(function(tweet) {
+      $.ajax("/tweets/", { method: "POST", data: str }).then(function() {
         $("#tweet-error-container").slideUp("slow");
         $(".error-message").text("");
         loadTweets();
@@ -84,7 +85,6 @@ $(document).ready(function() {
   });
 
   $(window).scroll(function() {
-    console.log(pageYOffset);
     if (pageYOffset >= 482) {
       $(".title").addClass("scrolled-past-header");
     } else if (pageYOffset < 482) {
@@ -94,9 +94,11 @@ $(document).ready(function() {
     if (pageYOffset >= 820) {
       $(".header-tweet-button").addClass("header-tweet-button-hide");
       $("#scroll-to-top-button").addClass("scroll-to-top-active");
+      $(".title").addClass("title-hide");
     } else if (pageYOffset < 820) {
       $(".header-tweet-button").removeClass("header-tweet-button-hide");
       $("#scroll-to-top-button").removeClass("scroll-to-top-active");
+      $(".title").removeClass("title-hide");
     }
   });
 });

@@ -3,7 +3,6 @@ nav {
   height: 120px;
   width: 100vw;
   z-index: 999;
-  // background-color: transparent;
   color: #fff;
   padding: 1.3em;
   top: 0;
@@ -35,6 +34,12 @@ nav .header-tweet-button .first-word-bold {
 }
 
 nav .header-tweet-button-hide {
+  visibility: hidden;
+  opacity: 0 !important;
+  transition: all 0.18s ease-out;
+}
+
+nav .title-hide {
   visibility: hidden;
   opacity: 0 !important;
   transition: all 0.18s ease-out;
