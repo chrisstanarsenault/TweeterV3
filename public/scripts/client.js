@@ -60,7 +60,7 @@ $(document).ready(function() {
 
   $("#tweet-form").submit(function(event) {
     event.preventDefault();
-    let str = $(this).serialize();
+
     if ($("textarea").val().length > 140) {
       $("#tweet-error-container").slideDown("fast");
       $(".error-message").text(
@@ -72,6 +72,7 @@ $(document).ready(function() {
         "Tweet tweet, try actually tweeting something!  Don't leave this blank!"
       );
     } else {
+      let str = $(this).serialize();
       $.ajax("/tweets/", { method: "POST", data: str }).then(function() {
         $("#tweet-error-container").slideUp("slow");
         $(".error-message").text("");
@@ -92,11 +93,9 @@ $(document).ready(function() {
 
   $(".header-tweet-button").click(function() {
     $(".new-tweet").slideToggle("slow");
-    $("textarea").val("");
+    $("textarea").text("");
     $(".counter").text(140);
-    $("#tweet-error-container")
-      .slideUp("fast")
-      .text("");
+    $("#tweet-error-container").slideUp("fast");
   });
 
   $(window).scroll(function() {
